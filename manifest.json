@@ -4,8 +4,8 @@
  "description": "A recovery companion based on Damon West's Six Dimes and a Nickel",
  "start_url": ".",
  "display": "standalone",
- "background_color": "#F7F2E9",
- "theme_color": "#10493B",
+ "background_color": "#EFF8FA",
+ "theme_color": "#005467",
  "icons": [
   {
    "src": "icon-192.png",
