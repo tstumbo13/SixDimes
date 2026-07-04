@@ -398,7 +398,7 @@ function wipe(){if(confirm("Erase all your writing and progress from this device
 /* ---------- book reader ---------- */
 let BOOK={page:1,from:"home",fromArg:0,doc:null};
 function openBook(p,from,fromArg){BOOK.page=p;BOOK.from=from;BOOK.fromArg=fromArg;go("book");}
-function bookBack(){if(BOOK.from==="session"){go("session",BOOK.fromArg);}else{go("home");}}
+function bookBack(){go(BOOK.from||"home",(BOOK.from==="session"||BOOK.from==="facsession")?BOOK.fromArg:null);}
 function bookNav(d){if(!BOOK.doc)return;const t=BOOK.page+d;if(t<1||t>BOOK.doc.numPages)return;BOOK.page=t;bookRender();}
 function bookLib(){
   return new Promise((res,rej)=>{
